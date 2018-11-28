@@ -4,7 +4,7 @@ Une Agence Immobilière en ligne
 
 ## Démo
 
-[Voir la démo](https://perso.raspgot.fr/Agence/public/index.php) *Hebergement à domicile*
+[Voir la démo](https://vps.raspgot.fr/_agence/public/index.php) *Hebergement à domicile*
 
 
 ## Installation
@@ -12,6 +12,7 @@ Une Agence Immobilière en ligne
 Se placer dans le répertoire **htdocs** (WAMPP) ou **/var/www/html** (LINUX)
 ```
 git clone https://github.com/raspgot/Agence
+cd Agence
 composer install
 ```
 **.env** à modifier
