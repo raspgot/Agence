@@ -5,15 +5,21 @@
 {% block body %}
   <div class="jumbotron text-center">
     <h1>Agency</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut cumque dolore error expedita itaque iure iusto magni, molestiae numquam omnis provident quae repellat sint soluta tempora unde voluptate voluptatibus.</p>
+    <p>Que diriez-vous de vendre votre bien en 48H chrono  ? C’est la proposition de <strong>Agency</strong>, créée en Décembre 2018. La site se propose de faire une offre d’achat ferme au vendeur après estimation, et de lui acheter le bien dans la foulée.<br>
+    Agency revend ensuite, après relooking de l’appartement selon le principe du home staging. Autre proposition, un engagement de vendre l’appartement dans les 3 mois.</p>
   </div>
 
   <div class="container">
     <h2>Les derniers biens</h2>
     <div class="row flex">
       {% for property in properties %}
-        <div class="col-3">
+        <div class="col-md-3 mb-3">
           <div class="card">
+              {% if property.filename %}
+                <img src="{{ vich_uploader_asset(property, "imageFile") | imagine_filter('thumb') }}" alt="apercu" class="card-img-top" style="width: 100%; height: auto;">
+                {% else %}
+                <img src="{{ 'images/properties/empty.png' | imagine_filter('thumb') }}" alt="apercu" class="card-img-top" style="width: 100%; height: auto;">
+              {% endif %}
             <div class="card-body">
               <h5 class="card-title">
                 <a href="{{ path('property.show', {id: property.id, slug: property.slug}) }}">{{ property.title }}</a>

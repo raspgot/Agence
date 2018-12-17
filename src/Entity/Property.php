@@ -32,8 +32,8 @@ class Property
     private $id;
 
     /**
-     * @var string|null
-     * @ORM\Column(type="string", length=255)
+     * @var string
+     * @ORM\Column(type="string", length=255, options={"default" : 0})
      */
     private $filename;
 
@@ -61,22 +61,25 @@ class Property
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\Range(min=10, max=400)
+     * @Assert\Range(min=15, max=300)
      */
     private $surface;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=1, max=20)
      */
     private $rooms;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=1, max=20)
      */
     private $bedrooms;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Range(min=0, max=20)
      */
     private $floor;
 
@@ -129,6 +132,7 @@ class Property
     public function __construct()
     {
         $this->created_at = new \DateTime();
+        $this->updated_at = new \DateTime();
         $this->options = new ArrayCollection();
     }
 

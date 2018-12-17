@@ -10,12 +10,12 @@ use Faker\Factory;
 class PropertyFixture extends Fixture
 {
     public function load(ObjectManager $manager)
-    {
+    {/*
         $faker = Factory::create('fr_FR');
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 25; $i++) {
             $property = new Property();
             $property
-                ->setTitle($faker->words(3, true))
+                ->setTitle($faker->words(2, true))
                 ->setDescription($faker->sentences(3, true))
                 ->setSurface($faker->numberBetween(20, 350))
                 ->setRooms($faker->numberBetween(2,10))
@@ -26,10 +26,10 @@ class PropertyFixture extends Fixture
                 ->setCity($faker->city)
                 ->setAdress($faker->address)
                 ->setPostalCode($faker->postcode)
-                //->setFilename($faker->numberBetween(1, 2))
+                //->setFilename($faker->optional())
                 ->setSold(false);
             $manager->persist($property);
         }
-        $manager->flush();
+        $manager->flush();*/
     }
 }
