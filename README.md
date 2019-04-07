@@ -4,7 +4,7 @@ Une Agence Immobilière en ligne
 
 ## Démo
 
-[Voir la démo](https://vps.raspgot.fr/_agence/public/index.php) *Hebergement à domicile*
+[Voir la démo](https://dev.raspgot.fr/agence/public/index.php) *Hebergement à domicile*
 
 
 ## Installation
